@@ -29,7 +29,7 @@ def browser(request):
         options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
         print("\nbrowser not found, start chrome browser for test..")
         browser = webdriver.Chrome(options=options)
-        raise pytest.UsageError("--browser_name should be chrome or firefox")
+        
     yield browser
     print("\nquit browser..")
     browser.quit()
